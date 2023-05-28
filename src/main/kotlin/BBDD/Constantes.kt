@@ -1,4 +1,4 @@
-package com.example.snake
+package BBDD
 
 object Constantes {
 }

@@ -1,4 +1,4 @@
-package com.example.snake
+package Auxiliar
 
 object Mensajes {
 }
