@@ -23,6 +23,10 @@ class LoginController {
     @FXML
     fun entrarButton(event: ActionEvent) {
 
+
+
+
+
     }
 
 }

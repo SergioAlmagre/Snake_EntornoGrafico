@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="Creación de varias clases&#10;y entornos gráficos">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/BBDD/Constantes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BBDD/Constantes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Serpiente/Elemento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Serpiente/Elemento.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/module-info.java" afterDir="false" />
+    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Fila.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake.sql" beforeDir="false" afterPath="$PROJECT_DIR$/snake.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +75,27 @@
       <option name="project" value="LOCAL" />
       <updated>1685296835462</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin">
+      <created>1685298087354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685298087354</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin">
+      <created>1685298103751</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685298103751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creación de varias clases&#10;y entornos gráficos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creación de varias clases&#10;y entornos gráficos" />
+    <MESSAGE value="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin" />
   </component>
 </project>
