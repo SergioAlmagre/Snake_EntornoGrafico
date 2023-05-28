@@ -5,9 +5,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -47,9 +49,6 @@
         <menus>
           <Menu mnemonicParsing="false" text="Opciones">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#pausarPartidaMenu" text="Pausar partida" />
-                  <MenuItem mnemonicParsing="false" onAction="#reanudarPartidaMenu" text="Reanudar partida" />
-                  <MenuItem mnemonicParsing="false" onAction="#reiniciarPartidaMenu" text="Reiniciar partida" />
                   <MenuItem mnemonicParsing="false" onAction="#guardarPartidaMenu" text="Guardar partida" />
                   <MenuItem mnemonicParsing="false" onAction="#exportarPartidaMenu" text="Exportar partida" />
                   <MenuItem mnemonicParsing="false" onAction="#importarPartidaMenu" text="Importar partida" />
@@ -72,8 +71,8 @@
         </menus>
       </MenuBar>
       <TextField fx:id="ganadasField" editable="false" layoutX="422.0" layoutY="656.0" prefHeight="25.0" prefWidth="87.0" />
-      <TextField fx:id="usuarioField" editable="false" layoutX="599.0" layoutY="54.0" />
-      <Text layoutX="516.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+      <TextField fx:id="usuarioField" editable="false" layoutX="597.0" layoutY="67.0" />
+      <Text layoutX="514.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
          <font>
             <Font size="20.0" />
          </font>
@@ -90,5 +89,23 @@
       </Text>
       <ProgressBar fx:id="progressBar" layoutX="71.0" layoutY="126.0" prefHeight="18.0" prefWidth="678.0" progress="0.0" />
       <TextField fx:id="perdidasField" editable="false" layoutX="422.0" layoutY="689.0" prefHeight="25.0" prefWidth="87.0" />
+      <RadioButton fx:id="playRadio" layoutX="73.0" layoutY="66.0" mnemonicParsing="false" text="Play">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="controlesRadio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="pauseRadio" layoutX="206.0" layoutY="66.0" mnemonicParsing="false" text="Pause" toggleGroup="$controlesRadio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="reiniciarRadio" layoutX="344.0" layoutY="66.0" mnemonicParsing="false" text="Reiniciar" toggleGroup="$controlesRadio">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
    </children>
 </AnchorPane>

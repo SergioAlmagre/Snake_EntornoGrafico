@@ -8,10 +8,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.snake.AdministracionView">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.snake.AdministracionController">
    <children>
-      <TableView fx:id="tablaUsuarios" layoutX="70.0" layoutY="119.0" prefHeight="496.0" prefWidth="660.0">
+      <TableView fx:id="tablaUsuarios" layoutX="70.0" layoutY="119.0" onMouseClicked="#onMouseClickTabla" prefHeight="496.0" prefWidth="660.0">
         <columns>
           <TableColumn fx:id="nombreColum" prefWidth="166.0" text="Nombre" />
           <TableColumn fx:id="dniColum" prefWidth="186.0" text="DNI" />
@@ -22,15 +21,15 @@
         </columns>
       </TableView>
       <Button fx:id="ejecutarButtonFX" layoutX="283.0" layoutY="714.0" mnemonicParsing="false" onAction="#ejecutarButton" prefHeight="36.0" prefWidth="258.0" text="Ejecutar" />
-      <Button fx:id="volverButtonFX" layoutX="70.0" layoutY="650.0" mnemonicParsing="false" onAction="#volverButton" prefHeight="100.0" prefWidth="100.0" text="Volver" />
+      <Button fx:id="volverButtonFX" layoutX="70.0" layoutY="650.0" mnemonicParsing="false" onAction="#salirAplicacion" prefHeight="100.0" prefWidth="100.0" text="Salir" />
       <Button fx:id="jugarButtonFX" layoutX="630.0" layoutY="650.0" mnemonicParsing="false" onAction="#jugarButton" prefHeight="100.0" prefWidth="100.0" text="Jugar" />
-      <TextField fx:id="nombreField" layoutX="70.0" layoutY="69.0" prefHeight="25.0" prefWidth="167.0" />
-      <TextField fx:id="dniField" layoutX="238.0" layoutY="69.0" prefHeight="25.0" prefWidth="184.0" />
-      <TextField fx:id="nivelField" layoutX="423.0" layoutY="69.0" prefHeight="25.0" prefWidth="83.0" />
-      <TextField fx:id="victoriasField" layoutX="506.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" />
-      <TextField fx:id="derrotasField" layoutX="585.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" />
-      <TextField fx:id="tipoField" layoutX="662.0" layoutY="69.0" prefHeight="25.0" prefWidth="68.0" />
-      <ComboBox fx:id="comboSeleccion" layoutX="283.0" layoutY="655.0" prefWidth="150.0" />
+      <TextField fx:id="nombreField" layoutX="70.0" layoutY="69.0" prefHeight="25.0" prefWidth="167.0" promptText="Nuevo nombre" />
+      <TextField fx:id="dniField" layoutX="238.0" layoutY="69.0" prefHeight="25.0" prefWidth="184.0" promptText="Nuevo DNI" />
+      <TextField fx:id="nivelField" layoutX="423.0" layoutY="69.0" prefHeight="25.0" prefWidth="83.0" promptText="Nivel" />
+      <TextField fx:id="victoriasField" layoutX="506.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" promptText="Victorias" />
+      <TextField fx:id="derrotasField" layoutX="585.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" promptText="Derrotas" />
+      <TextField fx:id="tipoField" layoutX="662.0" layoutY="69.0" prefHeight="25.0" prefWidth="68.0" promptText="Tipo" />
+      <ComboBox fx:id="comboSeleccion" layoutX="283.0" layoutY="655.0" onAction="#actionComboBox" prefWidth="150.0" />
       <CheckBox fx:id="checkConfirmacion" layoutX="471.0" layoutY="659.0" mnemonicParsing="false" text="Confirmo" />
    </children>
 </AnchorPane>

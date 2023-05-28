@@ -1,4 +1,0 @@
-package Auxiliar
-
-object Mensajes {
-}

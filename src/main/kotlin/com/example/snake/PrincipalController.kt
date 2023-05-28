@@ -3,12 +3,10 @@ package com.example.snake
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
-import javafx.scene.control.ProgressBar
-import javafx.scene.control.TableColumn
-import javafx.scene.control.TableView
-import javafx.scene.control.TextField
+import javafx.scene.control.*
 import java.net.URL
 import java.util.*
+
 
 class PrincipalController:Initializable {
 
@@ -60,8 +58,30 @@ class PrincipalController:Initializable {
     @FXML
     private lateinit var usuarioField: TextField
 
+    @FXML
+    private lateinit var pauseRadio: RadioButton
+
+    @FXML
+    private lateinit var playRadio: RadioButton
+
+    @FXML
+    private lateinit var reiniciarRadio: RadioButton
+
+
     override fun initialize(p0: URL?, p1: ResourceBundle?) {
-        TODO("Not yet implemented")
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -107,21 +127,6 @@ class PrincipalController:Initializable {
 
     @FXML
     fun izquierdaButton(event: ActionEvent) {
-
-    }
-
-    @FXML
-    fun pausarPartidaMenu(event: ActionEvent) {
-
-    }
-
-    @FXML
-    fun reanudarPartidaMenu(event: ActionEvent) {
-
-    }
-
-    @FXML
-    fun reiniciarPartidaMenu(event: ActionEvent) {
 
     }
 

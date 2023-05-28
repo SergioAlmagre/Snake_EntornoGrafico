@@ -4,10 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Fila.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake.sql" beforeDir="false" afterPath="$PROJECT_DIR$/snake.sql" afterDir="false" />
+    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="Añado datos a la base de datos">
+      <change afterPath="$PROJECT_DIR$/BitacoraErrores" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructuras de tablas/comida.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructuras de tablas/elemento.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructuras de tablas/fruta.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructuras de tablas/usuarios.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estructuras de tablas/veneno.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/BBDD/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Comida/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Partida.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Serpiente/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Usuario/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comida.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Estructuras de tablas/desktop.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/elemento.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fruta.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Datos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Datos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Mensajes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Mensaje.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/PrincipalController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/PrincipalController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/snake/administracion-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/snake/administracion-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/snake/detalleElemento-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/snake/detalleElemento-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/snake/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/snake/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/snake/principal-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/snake/principal-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuarios.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/veneno.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +73,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "S:/Mi unidad/1ºDAM/1 - Programación/2 - Ejercicios/2 - Kotlin/13 - Entornos gráficos/Snake/mysql-connector-java-8.0.30.jar",
+    "last_opened_file_path": "S:/Mi unidad/1ºDAM/1 - Programación/2 - Ejercicios/2 - Kotlin/13 - Entornos gráficos/_11_TeleDominosPizza",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.41264367"
+    "project.structure.side.proportion": "0.41264367",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -89,13 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685298103751</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Añado datos a la base de datos">
+      <created>1685306004552</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685306004552</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Creación de varias clases&#10;y entornos gráficos" />
     <MESSAGE value="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se establecen conexiones a base de datos&#10;Se crea la estructura de la base de datos en phpMyAdmin" />
+    <MESSAGE value="Añado datos a la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añado datos a la base de datos" />
   </component>
 </project>
