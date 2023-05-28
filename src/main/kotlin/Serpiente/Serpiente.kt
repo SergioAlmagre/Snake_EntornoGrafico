@@ -1,0 +1,4 @@
+package Juego
+
+class Serpiente {
+}

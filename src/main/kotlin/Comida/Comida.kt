@@ -1,0 +1,4 @@
+package Comida
+
+class Comida {
+}
