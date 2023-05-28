@@ -9,7 +9,7 @@ import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
 import javafx.scene.control.TextField
 
-class AdministracionView {
+class AdministracionController {
 
     @FXML
     private lateinit var checkConfirmacion: CheckBox
