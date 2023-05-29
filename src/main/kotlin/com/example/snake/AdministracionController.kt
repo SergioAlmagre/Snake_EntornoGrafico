@@ -110,11 +110,7 @@ class AdministracionController:Initializable {
             derrotasField.textProperty().addListener { _, _, _ -> cambios() }
             tipoField.textProperty().addListener { _, _, _ -> cambios() }
 
-            temporizador = Timer(1000, object : ActionListener {
-                override fun actionPerformed(e: java.awt.event.ActionEvent?) {
 
-                }
-            })
 
     }catch (e:Exception){
             Datos.gestionErrores(e,"inicializer de Administracion")
@@ -129,19 +125,19 @@ class AdministracionController:Initializable {
             println(index)
             if (comprobarIntegridad(index)) {
                 if (index == 0){
-                    Conexion.updateUsuario(Datos.usuarioAux!!)
+                    Conexion.updateUsuario(Datos.usuarioAdmistracion!!)
                     Mensaje.informativo("Usuario actualizado con éxito")
                     actualizarTablaUsuarios()
                     hayCambios = false
                 }
                 else if (index == 1){
-                    Conexion.insertarUsuario(Datos.usuarioAux!!)
+                    Conexion.insertarUsuario(Datos.usuarioAdmistracion!!)
                     Mensaje.informativo("Usuario insertado con éxito")
                     actualizarTablaUsuarios()
                     hayCambios = false
                 }
                 else if (index == 2){
-                    Conexion.eliminarUsuario(Datos.usuarioAux!!)
+                    Conexion.eliminarUsuario(Datos.usuarioAdmistracion!!)
                     Mensaje.informativo("Usuario borrado con éxito")
                     actualizarTablaUsuarios()
                     hayCambios = false
@@ -259,7 +255,7 @@ class AdministracionController:Initializable {
                     Mensaje.informativo("Por favor, marque el check para poder realizar cualquier cambio")
                     completo = false
                 }else if(completo){
-                    Datos.usuarioAux = usu
+                    Datos.usuarioAdmistracion = usu
                 }
             } else {
                 Mensaje.informativo("No ha realizado ningún cambio para poder ejecutar ninguna acción")
@@ -269,7 +265,7 @@ class AdministracionController:Initializable {
             Mensaje.informativo("Seleccione primero una acción antes de ejecutar")
             completo = false
         }
-        println(Datos.usuarioAux)
+        println(Datos.usuarioAdmistracion)
         println(completo)
         return completo
     }

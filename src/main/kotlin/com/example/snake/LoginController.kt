@@ -31,9 +31,9 @@ class LoginController {
     fun entrarButton(event: ActionEvent) {
 
         try {
-            Datos.usuarioAux = Conexion.obtenerUsuarioLogin(usuarioField.text, dniField.text)
-            if (Datos.usuarioAux != null) {
-                if (Datos.usuarioAux!!.tipo == 1) {
+            Datos.usuarioLogin = Conexion.obtenerUsuarioLogin(usuarioField.text, dniField.text)
+            if (Datos.usuarioLogin != null) {
+                if (Datos.usuarioLogin!!.tipo == 1) {
                     val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("administracion-view.fxml"))
                     val scene = Scene(fxmlLoader.load())
                     val stage = Stage()

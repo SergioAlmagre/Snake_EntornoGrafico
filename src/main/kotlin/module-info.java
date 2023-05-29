@@ -9,5 +9,7 @@ module com.example.snake {
     opens com.example.snake to javafx.fxml;
     exports com.example.snake;
     opens Usuario; // Abre el paquete Usuario al módulo javafx.base
+    opens Juego to javafx.base;
+
 
 }

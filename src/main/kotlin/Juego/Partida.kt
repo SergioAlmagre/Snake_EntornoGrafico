@@ -5,12 +5,19 @@ import Usuario.Usuario
 class Partida {
 
     var usuario:Usuario?
-    var mapa:Mapa?
+    var mapa = Mapa()
 
-    constructor(usuario: Usuario, mapa: Mapa) {
+    constructor(usuario: Usuario) {
         this.usuario = usuario
-        this.mapa = mapa
     }
+
+
+
+
+
+
+
+
 
 
 }

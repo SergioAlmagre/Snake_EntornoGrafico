@@ -1,7 +1,10 @@
 package Juego
 
+import Serpiente.Elemento
+
 class Celda {
-    var contenidoCelda = ArrayList<Any?>()
+    var contenidoCelda:Any? = null
+
 
 
 }

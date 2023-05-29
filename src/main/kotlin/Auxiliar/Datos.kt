@@ -11,12 +11,13 @@ import java.time.LocalTime
 object Datos {
 
     var partida:Partida? = null
-    var usuarioAux: Usuario? = null
+    var usuarioAdmistracion: Usuario? = null
+    var usuarioLogin: Usuario? = null
 
 
     fun gestionErrores(excepcion:Exception,informacion:String){
         var fecha = LocalDate.now().toString()
-        var hora = LocalTime.now().toString()
+        var hora = LocalTime.now().toString().substring(0,8)
         var guion = " - "
         var mensaje = fecha + guion + hora + guion + excepcion.toString() + guion + informacion
 

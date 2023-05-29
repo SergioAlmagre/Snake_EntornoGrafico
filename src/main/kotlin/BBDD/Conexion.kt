@@ -1,6 +1,7 @@
 package BBDD
 
 import Auxiliar.Datos
+import Serpiente.Elemento
 import Usuario.Usuario
 import java.sql.Connection
 import java.sql.DriverManager
@@ -169,6 +170,33 @@ object Conexion {
             Datos.gestionErrores(e,sentencia)
         }
         return cod
+    }
+
+    fun obtenerAllElementos():LinkedList<Elemento?>{
+        var sentencia = "select * from elementos"
+        var allEle = LinkedList<Elemento?>()
+        var ele:Elemento? = null
+        try {
+            abrirConexion()
+
+            var pstmt = conexion!!.prepareStatement(sentencia)
+            registros = pstmt.executeQuery()
+            while (registros!!.next()){
+                ele = Elemento(
+                    registros!!.getInt(1),
+                    registros!!.getInt(2),
+                    registros!!.getInt(3),
+                    registros!!.getString(4),
+                    registros!!.getInt(5)
+                )
+                allEle.add(ele)
+            }
+
+            cerrarConexion()
+        }catch (e:Exception){
+            Datos.gestionErrores(e,sentencia)
+        }
+        return allEle
     }
 
 
