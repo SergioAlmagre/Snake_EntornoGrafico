@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="AdministracionController y todas sus funcionalidades terminadas">
+    <list default="true" id="c27fc9cf-d013-40f1-8505-92e6f610fa18" name="Changes" comment="Añadidos movimientos automaticos de la serpiente&#10;Añadida función obtener elementos&#10;Añadido string personalizado en elementos&#10;Añadidas funciones básicas mapa&#10;Corrección de usuario temporal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BitacoraErrores" beforeDir="false" afterPath="$PROJECT_DIR$/BitacoraErrores" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Datos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Auxiliar/Datos.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/BBDD/Conexion.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Juego/Celda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Celda.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Juego/Mapa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Mapa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Juego/Partida.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Juego/Partida.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Serpiente/Elemento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Serpiente/Elemento.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/AdministracionController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/LoginController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/PrincipalController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/snake/PrincipalController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/snake/principal-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/snake/principal-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685343875241</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Añadidos movimientos automaticos de la serpiente&#10;Añadida función obtener elementos&#10;Añadido string personalizado en elementos&#10;Añadidas funciones básicas mapa&#10;Corrección de usuario temporal">
+      <created>1685369181490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685369181490</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,6 +131,7 @@
     <MESSAGE value="Añado datos a la base de datos" />
     <MESSAGE value="Grandes avances en:&#10;- Conexión&#10;- AdministracionController&#10;- LoginController" />
     <MESSAGE value="AdministracionController y todas sus funcionalidades terminadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdministracionController y todas sus funcionalidades terminadas" />
+    <MESSAGE value="Añadidos movimientos automaticos de la serpiente&#10;Añadida función obtener elementos&#10;Añadido string personalizado en elementos&#10;Añadidas funciones básicas mapa&#10;Corrección de usuario temporal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadidos movimientos automaticos de la serpiente&#10;Añadida función obtener elementos&#10;Añadido string personalizado en elementos&#10;Añadidas funciones básicas mapa&#10;Corrección de usuario temporal" />
   </component>
 </project>

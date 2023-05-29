@@ -28,8 +28,8 @@ class PrincipalController:Initializable {
     var tiempo = 1
     var contador = 60
     var allElementos = Conexion.obtenerAllElementos()
-    var filAct = 9
-    var colAct = 4
+    var filAct = 9 //Marcará la primera posicion y el desarrollo de las siguientes
+    var colAct = 7 //Marcará la primera posicion y el desarrollo de las siguientes
 
     /**
      * direccion
@@ -141,7 +141,12 @@ class PrincipalController:Initializable {
         tableTableroJuego.selectionModel.cellSelectionEnabledProperty().set(true)
         tableTableroJuego.selectionModel.selectionMode = SelectionMode.SINGLE
 
-        posicionarPrimerElemento()
+        ponerElemento(filAct,colAct) // ESTE SERÁ EL PRIMERO
+
+        ponerElemento(9,3)
+
+
+
         tableTableroJuego.items.clear()
         for (i in 0..partida.mapa.getFilas() - 1) {
 
@@ -273,8 +278,8 @@ class PrincipalController:Initializable {
         }
     }
 
-    fun posicionarPrimerElemento(){
-        partida.mapa.setPosicion(9,4,allElementos.pop()!!)
+    fun ponerElemento(fil:Int, col:Int){
+        partida.mapa.setPosicion(fil,col,allElementos.pop()!!)
     }
 
     fun actualizarTabla(){
@@ -297,29 +302,37 @@ class PrincipalController:Initializable {
     }
 
     fun movimientoIzquierda(){
-        println("capturado movimiento izquierda")
         direccion = 1
 
         try {
             var elementoAux: Any? = null
 
-            if(colAct-1 >= 0){
-                if(partida.mapa.getPosicion(filAct,colAct-1) == null){
-                    partida.mapa.setPosicion(filAct,colAct-1,partida.mapa.getPosicion(filAct,colAct)!!)
+            if(colAct-1 >= 0) {
+                if (partida.mapa.getPosicion(filAct, colAct - 1) == null) {
+                    partida.mapa.setPosicion(filAct, colAct - 1, partida.mapa.getPosicion(filAct, colAct)!!)
+                    if (colAct + 1 <= partida.mapa.getColumnas()) {
+                        if (partida.mapa.getPosicion(filAct, colAct + 1) != null) {
+                            elementoAux = partida.mapa.getPosicion(filAct, colAct + 1)
+                            println(elementoAux)
+                            partida.mapa.setPosicion(filAct, colAct, elementoAux!!)
+                        } else {
+                            partida.mapa.setPosicion(filAct, colAct, null)
+                        }
+                        colAct = colAct - 1
+                    }
+                } else {
+                    if (colAct - 2 >= 0) {
+                        partida.mapa.setPosicion(filAct, colAct - 2, partida.mapa.getPosicion(filAct, colAct - 1)!!)
+                        partida.mapa.setPosicion(filAct, colAct - 1, partida.mapa.getPosicion(filAct, colAct)!!)
+                        if (partida.mapa.getPosicion(filAct, colAct + 1) != null) {
+                            elementoAux = partida.mapa.getPosicion(filAct, colAct + 1)
+                            println(elementoAux)
+                            partida.mapa.setPosicion(filAct, colAct, elementoAux!!)
+                            colAct = colAct + 2
+                        }
+                    }
                 }
             }
-
-            if (colAct+1 <= partida.mapa.getColumnas()){
-                if (partida.mapa.getPosicion(filAct,colAct+1) != null){
-                    elementoAux = partida.mapa.getPosicion(filAct,colAct+1)
-                    println(elementoAux)
-                    partida.mapa.setPosicion(filAct,colAct,elementoAux!!)
-                }else{
-                    partida.mapa.setPosicion(filAct,colAct,null)
-                }
-            }
-
-            colAct = colAct-1
             actualizarTabla()
         }catch (e:Exception){
             Datos.gestionErrores(e,"movimientoIzquierda")
@@ -328,7 +341,6 @@ class PrincipalController:Initializable {
     fun movimientoDerecha(){
         direccion = 2
 
-        println("capturado movimiento dercha")
         try {
             var elementoAux: Any? = null
 
@@ -357,7 +369,6 @@ class PrincipalController:Initializable {
     fun movimientoArriba(){
         direccion = 3
 
-        println("capturado movimiento arriba")
         try {
             var elementoAux: Any? = null
 
@@ -386,7 +397,6 @@ class PrincipalController:Initializable {
     fun movimientoAbajo(){
         direccion = 4
 
-        println("capturado movimiento abajo")
         try {
             var elementoAux: Any? = null
 
