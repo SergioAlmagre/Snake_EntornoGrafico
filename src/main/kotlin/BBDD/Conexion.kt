@@ -107,6 +107,70 @@ object Conexion {
         return allUsu
     }
 
+    fun updateUsuario(usuario: Usuario):Int{
+        cod = 0
+        var sentencia = "update usuarios set nombre = ?, nivel = ?, victorias = ?, derrotas = ?, tipo = ? where dni like ?"
+        try {
+            abrirConexion()
+
+            var pstmt = conexion!!.prepareStatement(sentencia)
+
+            pstmt.setString(1,usuario.nombre)
+            pstmt.setInt(2,usuario.nivel)
+            pstmt.setInt(3,usuario.victorias)
+            pstmt.setInt(4,usuario.derrotas)
+            pstmt.setInt(5,usuario.tipo)
+            pstmt.setString(6,usuario.dni)
+            pstmt.executeUpdate()
+
+            cerrarConexion()
+            cod = 1
+        }catch (e:Exception){
+            Datos.gestionErrores(e,sentencia)
+        }
+        return cod
+    }
+
+    fun insertarUsuario(usuario: Usuario):Int{
+        cod = 0
+        var sentencia = "insert into usuarios values (?,?,?,?,?,?)"
+        try {
+            abrirConexion()
+
+            var pstmt = conexion!!.prepareStatement(sentencia)
+            pstmt.setString(1,usuario.dni)
+            pstmt.setString(2,usuario.nombre)
+            pstmt.setInt(3,usuario.nivel)
+            pstmt.setInt(4,usuario.victorias)
+            pstmt.setInt(5,usuario.derrotas)
+            pstmt.setInt(6,usuario.tipo)
+            pstmt.executeUpdate()
+
+            cerrarConexion()
+            cod = 1
+        }catch (e:Exception){
+            Datos.gestionErrores(e,sentencia)
+        }
+        return cod
+    }
+
+    fun eliminarUsuario(usuario: Usuario):Int{
+        cod = 0
+        var sentencia = "delete from usuarios where dni like ?"
+        try {
+            abrirConexion()
+
+            var pstmt = conexion!!.prepareStatement(sentencia)
+            pstmt.setString(1,usuario.dni)
+            pstmt.executeUpdate()
+
+            cerrarConexion()
+        }catch (e:Exception){
+            Datos.gestionErrores(e,sentencia)
+        }
+        return cod
+    }
+
 
 
 

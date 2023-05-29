@@ -23,12 +23,12 @@
       <Button fx:id="ejecutarButtonFX" layoutX="283.0" layoutY="714.0" mnemonicParsing="false" onAction="#ejecutarButton" prefHeight="36.0" prefWidth="258.0" text="Ejecutar" />
       <Button fx:id="volverButtonFX" layoutX="70.0" layoutY="650.0" mnemonicParsing="false" onAction="#salirAplicacion" prefHeight="100.0" prefWidth="100.0" text="Salir" />
       <Button fx:id="jugarButtonFX" layoutX="630.0" layoutY="650.0" mnemonicParsing="false" onAction="#jugarButton" prefHeight="100.0" prefWidth="100.0" text="Jugar" />
-      <TextField fx:id="nombreField" layoutX="70.0" layoutY="69.0" prefHeight="25.0" prefWidth="167.0" promptText="Nuevo nombre" />
-      <TextField fx:id="dniField" layoutX="238.0" layoutY="69.0" prefHeight="25.0" prefWidth="184.0" promptText="Nuevo DNI" />
-      <TextField fx:id="nivelField" layoutX="423.0" layoutY="69.0" prefHeight="25.0" prefWidth="83.0" promptText="Nivel" />
-      <TextField fx:id="victoriasField" layoutX="506.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" promptText="Victorias" />
-      <TextField fx:id="derrotasField" layoutX="585.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" promptText="Derrotas" />
-      <TextField fx:id="tipoField" layoutX="662.0" layoutY="69.0" prefHeight="25.0" prefWidth="68.0" promptText="Tipo" />
+      <TextField fx:id="nombreField" layoutX="70.0" layoutY="69.0" prefHeight="25.0" prefWidth="166.0" promptText="Nuevo nombre" />
+      <TextField fx:id="dniField" layoutX="238.0" layoutY="69.0" prefHeight="25.0" prefWidth="183.0" promptText="Nuevo DNI" />
+      <TextField fx:id="nivelField" layoutX="423.0" layoutY="69.0" prefHeight="25.0" prefWidth="82.0" promptText="Nivel" />
+      <TextField fx:id="victoriasField" layoutX="507.0" layoutY="69.0" prefHeight="25.0" prefWidth="77.0" promptText="Victorias" />
+      <TextField fx:id="derrotasField" layoutX="586.0" layoutY="69.0" prefHeight="25.0" prefWidth="75.0" promptText="Derrotas" />
+      <TextField fx:id="tipoField" layoutX="663.0" layoutY="69.0" prefHeight="25.0" prefWidth="67.0" promptText="Tipo" />
       <ComboBox fx:id="comboSeleccion" layoutX="283.0" layoutY="655.0" onAction="#actionComboBox" prefWidth="150.0" />
       <CheckBox fx:id="checkConfirmacion" layoutX="471.0" layoutY="659.0" mnemonicParsing="false" text="Confirmo" />
    </children>

@@ -3,11 +3,9 @@ package com.example.snake
 import Auxiliar.Datos
 import Auxiliar.Mensaje
 import BBDD.Conexion
-import Usuario.Usuario
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
-import javafx.scene.Node
 import javafx.scene.Scene
 import javafx.scene.control.Button
 import javafx.scene.control.Label
@@ -33,9 +31,9 @@ class LoginController {
     fun entrarButton(event: ActionEvent) {
 
         try {
-            Datos.usuarioLogin = Conexion.obtenerUsuarioLogin(usuarioField.text, dniField.text)
-            if (Datos.usuarioLogin != null) {
-                if (Datos.usuarioLogin!!.tipo == 1) {
+            Datos.usuarioAux = Conexion.obtenerUsuarioLogin(usuarioField.text, dniField.text)
+            if (Datos.usuarioAux != null) {
+                if (Datos.usuarioAux!!.tipo == 1) {
                     val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("administracion-view.fxml"))
                     val scene = Scene(fxmlLoader.load())
                     val stage = Stage()

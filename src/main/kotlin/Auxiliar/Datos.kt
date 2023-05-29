@@ -7,12 +7,11 @@ import java.io.File
 import java.io.FileWriter
 import java.time.LocalDate
 import java.time.LocalTime
-import java.util.Date
 
 object Datos {
 
     var partida:Partida? = null
-    var usuarioLogin: Usuario? = null
+    var usuarioAux: Usuario? = null
 
 
     fun gestionErrores(excepcion:Exception,informacion:String){

@@ -15,7 +15,6 @@ import javafx.scene.input.MouseEvent
 import javafx.stage.Modality
 import javafx.stage.Stage
 import java.awt.event.ActionListener
-import java.net.PortUnreachableException
 import java.net.URL
 import java.util.*
 import javax.swing.Timer
@@ -125,41 +124,33 @@ class AdministracionController:Initializable {
 
     @FXML
     fun ejecutarButton(event: ActionEvent) {
-        var completo = true
-
-        if (comboSeleccion.selectionModel.selectedIndex == 0){
-            if (hayCambios) {
-                var usu: Usuario? = null
-                if (usu != null) {
-                    usu!!.nombre = nombreField.text
-                    usu!!.dni = dniField.text
-                    usu!!.nivel = nivelField.text.toInt()
-                    usu!!.victorias = victoriasField.text.toInt()
-                    usu!!.derrotas = derrotasField.text.toInt()
-                    usu!!.tipo = tipoField.text.toInt()
-
-                    if (usu.dni.isBlank() || usu.nombre.isBlank()) {
-                        Mensaje.informativo("Debe rellenar obligatoriamente los campos NOMBRE y DNI")
-                        completo = false
-                    } else if (usu.tipo > 1) {
-                        Mensaje.informativo("Los tipos no pueden superar el 1")
-                        completo = false
-                    } else if (usu.dni.length > 9) {
-                        Mensaje.informativo("El DNI no puede superar los 9 dígitos")
-                        completo = false
-                    } else if (checkConfirmacion.isDisable) {
-                        Mensaje.informativo("Por favor, marque el check para poder realizar cualquier cambio")
-                        completo = false
-                    }
-                } else {
-                    Mensaje.informativo("No ha seleccionado ningún usuario")
+        try {
+            var index = comboSeleccion.selectionModel.selectedIndex
+            println(index)
+            if (comprobarIntegridad(index)) {
+                if (index == 0){
+                    Conexion.updateUsuario(Datos.usuarioAux!!)
+                    Mensaje.informativo("Usuario actualizado con éxito")
+                    actualizarTablaUsuarios()
+                    hayCambios = false
                 }
-            } else {
-                Mensaje.informativo("No ha realizado ningún cambio para poder ejecutar ninguna acción")
+                else if (index == 1){
+                    Conexion.insertarUsuario(Datos.usuarioAux!!)
+                    Mensaje.informativo("Usuario insertado con éxito")
+                    actualizarTablaUsuarios()
+                    hayCambios = false
+                }
+                else if (index == 2){
+                    Conexion.eliminarUsuario(Datos.usuarioAux!!)
+                    Mensaje.informativo("Usuario borrado con éxito")
+                    actualizarTablaUsuarios()
+                    hayCambios = false
+                }
             }
+            checkConfirmacion.isSelected = false
+        }catch (e:Exception){
+            Datos.gestionErrores(e,"ejecutarButton")
         }
-
-
     }
 
     @FXML
@@ -202,6 +193,7 @@ class AdministracionController:Initializable {
             victoriasField.text = usu.nivel.toString()
             derrotasField.text = usu.nivel.toString()
             tipoField.text = usu.tipo.toString()
+            hayCambios = false
         }catch (e:Exception){
             Datos.gestionErrores(e,"OnmouseClickTabla")
         }
@@ -214,11 +206,77 @@ class AdministracionController:Initializable {
     @FXML
     fun actionComboBox(event: ActionEvent) {
         var allFields = listOf(nombreField,dniField,nivelField,victoriasField,derrotasField,tipoField)
+
+        if(comboSeleccion.selectionModel.selectedIndex == 0){
+            for (e in allFields){
+                e.style = "-fx-background-color: CCFFFC;"
+            }
+            dniField.isDisable = true
+        }
+
         if (comboSeleccion.selectionModel.selectedIndex == 1){
             for (e in allFields){
                 e.text = null
+                e.style = "-fx-background-color: DEFFCC;"
             }
+            dniField.isDisable = false
         }
+
+        if(comboSeleccion.selectionModel.selectedIndex == 2){
+            for (e in allFields){
+                e.style = "-fx-background-color: FFCCCC;"
+            }
+            dniField.isDisable = false
+        }
+    }
+
+    fun comprobarIntegridad(index:Int):Boolean{
+        var completo = true
+
+        if (index != -1){
+            if (hayCambios || index == 1 || index == 2) {
+                var usu: Usuario? = tablaUsuarios.selectionModel.selectedItem
+                if (usu != null) {
+                    usu!!.nombre = nombreField.text
+                    usu!!.dni = dniField.text
+                    usu!!.nivel = nivelField.text.toInt()
+                    usu!!.victorias = victoriasField.text.toInt()
+                    usu!!.derrotas = derrotasField.text.toInt()
+                    usu!!.tipo = tipoField.text.toInt()
+                } else {
+                    Mensaje.informativo("No ha seleccionado ningún usuario")
+                }
+                if (usu!!.dni.isBlank() || usu.nombre.isBlank()) {
+                    Mensaje.informativo("Debe rellenar obligatoriamente los campos NOMBRE y DNI")
+                    completo = false
+                } else if (usu.tipo > 1) {
+                    Mensaje.informativo("Los tipos no pueden superar el 1")
+                    completo = false
+                } else if (usu.dni.length > 10) {
+                    Mensaje.informativo("El DNI no puede superar los 10 dígitos")
+                    completo = false
+                } else if (!checkConfirmacion.isSelected) {
+                    Mensaje.informativo("Por favor, marque el check para poder realizar cualquier cambio")
+                    completo = false
+                }else if(completo){
+                    Datos.usuarioAux = usu
+                }
+            } else {
+                Mensaje.informativo("No ha realizado ningún cambio para poder ejecutar ninguna acción")
+                completo = false
+            }
+        }else{
+            Mensaje.informativo("Seleccione primero una acción antes de ejecutar")
+            completo = false
+        }
+        println(Datos.usuarioAux)
+        println(completo)
+        return completo
+    }
+
+    fun actualizarTablaUsuarios(){
+        tablaUsuarios.items.clear()
+        tablaUsuarios.items.addAll(Conexion.obtenerAllUsuarios())
     }
 
 
